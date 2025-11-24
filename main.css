@@ -1,0 +1,19 @@
+header,
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background-color: gray;
+}
+body {
+  display: flexbox;
+}
+
+aside {
+  background-color: lightgray;
+}
+article {
+}
