@@ -3,17 +3,46 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+  justify-content: center;
+}
+body {
+  display: grid;
 }
 
 nav {
   background-color: gray;
+  overflow: auto;
+  display: block;
+  padding: 10px;
+  border: 5px ;
 }
-body {
-  display: flexbox;
+main {
+  display: grid;
+  padding: 10px;
+  border: 5px ;
+  grid-template-columns: 15% auto 20% ;
 }
-
 aside {
   background-color: lightgray;
+  overflow: auto;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 5px ;
 }
-article {
+section {
+  padding: 15px;
+}
+
+section div {
+  float : right;
+  margin-left: 20px;
+  width: 500px;
+
+}
+section div img {
+  width: 150px;
+  height: auto;
+  margin: 2px;
 }
