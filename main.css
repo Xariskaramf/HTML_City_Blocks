@@ -1,3 +1,5 @@
+
+
 header,
 footer {
   background-color: black;
@@ -5,8 +7,11 @@ footer {
   text-align: center;
   justify-content: center;
 }
+
+
 body {
   display: grid;
+  font-size: medium;
 }
 
 nav {
@@ -14,13 +19,13 @@ nav {
   overflow: auto;
   display: block;
   padding: 10px;
-  border: 5px ;
+  border: 5px;
 }
 main {
   display: grid;
   padding: 10px;
-  border: 5px ;
-  grid-template-columns: 15% auto 20% ;
+  border: 5px;
+  grid-template-columns: 15% auto 20%;
 }
 aside {
   background-color: lightgray;
@@ -29,20 +34,26 @@ aside {
   align-items: start;
   justify-content: flex-start;
   padding: 10px;
-  border: 5px ;
+  border: 5px;
 }
 section {
   padding: 15px;
 }
 
 section div {
-  float : right;
+  float: right;
   margin-left: 20px;
   width: 500px;
-
-}
+  gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
 section div img {
-  width: 150px;
-  height: auto;
-  margin: 2px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+section div img.wide {
+  grid-column: span 2;
+  height: initial;
 }

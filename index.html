@@ -12,18 +12,11 @@
     </header>
     <main>
       <nav>
-        <a href="athina.html">Αθήνα</a><br><br>
+        <a href="./cities/athina.html">Αθήνα</a><br><br>
         <a href="#">Θεσσαλονίκη</a><br><br>
-        <a href="kavala.html">Καβάλα</a><br><br>
+        <a href="./cities/kavala.html">Καβάλα</a><br><br>
       </nav>
       <section>
-        <div>
-          <img src="./assets/thess1.jpg" alt="Λευκός Πύργος" />
-          <img src="./assets/thess2.jpg" alt="Αψίδα Γαλερίου" />
-          <img src="./assets/thess3.jpg" alt="Παραλία Θεσσαλονίκης" />
-          <img src="./assets/thess4.jpg" alt="Μέγας Αλέξανδρος" />
-          <img src="./assets/thess5.jpg" alt="Θεσσαλονικη night view" />
-        </div>
         <p>
           Η Θεσσαλονίκη είναι η μεγαλύτερη σε έκταση και πληθυσμό πόλη της
           Μακεδονίας, καθώς είναι και πρωτεύουσα της, και δεύτερη μεγαλύτερη
@@ -31,6 +24,13 @@
           ανέρχεται σε 317.779 κατοίκους, και ο μόνιμος πληθυσμός της
           Περιφερειακής Ενότητας Θεσσαλονίκης ανέρχεται σε 1.092.919 κατοίκους.
         </p>
+        <div>
+          <img src="./assets/thessaloniki/thess1.jpg" alt="Λευκός Πύργος" />
+          <img src="./assets/thessaloniki/thess2.jpg" alt="Αψίδα Γαλερίου" />
+          <img src="./assets/thessaloniki/thess5.jpg" alt="Θεσσαλονικη night view" />
+          <img src="./assets/thessaloniki/thess4.jpg" alt="Μέγας Αλέξανδρος" />
+          <img src="./assets/thessaloniki/thess3.jpg" class="wide" alt="Παραλία Θεσσαλονίκης" />
+        </div>
 
         <p>
           Αποτελεί την πρωτεύουσα του Νομού Θεσσαλονίκης, την έδρα του Δήμου
@@ -65,7 +65,10 @@
     </main>
     <footer>
       <p>Καραμφυλλίδης Θεοχάρης</p>
-      <p>Copyright Ελλάδα</p>
+      <p>© Copyright Ελλάδα <span id="copyright-year"></span></p>
     </footer>
+    <script>
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
