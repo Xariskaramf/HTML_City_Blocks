@@ -40,7 +40,7 @@ section {
   padding: 15px;
 }
 
-section div {
+section:not(#forma) div {
   float: right;
   margin-left: 20px;
   width: 500px;
@@ -55,5 +55,45 @@ section div img {
 }
 section div img.wide {
   grid-column: span 2;
-  height: initial;
+  height: 20cap;
 }
+#forma{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  align-items: start;
+}
+#errorBox {
+  background-color: yellow;
+  color: red;
+  padding: 10px;
+  font-weight: bold;
+  height: fit-content;
+  border: 2px solid red;
+}
+.formRow {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  margin-bottom: 15px;
+  align-items: start;
+}
+.formRow > label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.formRow input[type="text"] {
+    width: 200px;
+}
+.formRow select {
+    width: 150px;
+}
+.buttons button {
+    margin-right: 5px;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: normal;
+}
+
