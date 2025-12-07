@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Εκδήλωση Ενδιαφέροντος</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="icon"
+      href="./assets/flag-for-greece-svgrepo-com.svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Πόλεις της Eλλάδος</h1>
+    </header>
+    <main>
+      <nav>
+        <a href="./cities/athina.html">Αθήνα</a><br /><br />
+        <a href="./index.html">Θεσσαλονίκη</a><br /><br />
+        <a href="./cities/kavala.html">Καβάλα</a><br /><br />
+      </nav>
+      <section>
+        <div id="results">
+          <h3>Δεδομένα από την φόρμα:</h3>
+          <p>-----------------------</p>
+          
+          <p>Ονοματεπώνυμο: <span id="resName"></span></p>
+          <p>Περιοχή: <span id="resArea"></span></p>
+          <p>Ενδιαφέροντα: <span id="resInterests"></span></p>
+          <p>Email: <span id="resEmail"></span></p>
+        </div>
+        <script>
+          const params = new URLSearchParams(window.location.search);
+
+          document.getElementById("resName").textContent =
+            params.get("fullName");
+          document.getElementById("resArea").textContent = params.get("area");
+          document.getElementById("resEmail").textContent = params.get("email");
+
+          const interests = params.getAll("interests");
+          document.getElementById("resInterests").textContent =
+            interests.join(", ");
+        </script>
+      </section>
+      <aside>
+        <a href="./forma.html">Εκδήλωση Ενδιαφέροντος</a>
+      </aside>
+    </main>
+    <footer>
+      <p>© Copyright Ελλάδα <span id="copyright-year"></span></p>
+    </footer>
+    <script>
+      document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>

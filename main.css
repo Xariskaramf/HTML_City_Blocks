@@ -1,5 +1,3 @@
-
-
 header,
 footer {
   background-color: black;
@@ -7,7 +5,6 @@ footer {
   text-align: center;
   justify-content: center;
 }
-
 
 body {
   display: grid;
@@ -47,7 +44,7 @@ section:not(#forma) div {
   gap: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  }
+}
 section div img {
   width: 100%;
   height: 150px;
@@ -57,7 +54,7 @@ section div img.wide {
   grid-column: span 2;
   height: 20cap;
 }
-#forma{
+#forma {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 30px;
@@ -82,18 +79,47 @@ section div img.wide {
   margin-right: 10px;
 }
 .formRow input[type="text"] {
-    width: 200px;
+  width: 200px;
 }
 .formRow select {
-    width: 150px;
+  width: 150px;
 }
 .buttons button {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: normal;
 }
-
+#results {
+  float: none !important;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  grid-template-columns: none !important;
+  display: block;
+  background-color: lightgray;
+  color: green;
+  border: 2px solid red;
+  align-items: center !important;
+  margin: 20px 0;
+  max-width: 600px;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 10px;
+}
+#results span {
+  font-weight: normal;
+  color: green;
+}
+#results p {
+  font-weight: bold;
+  margin: 0;
+}
+#results h3 {
+  margin: 0;
+  color: green;
+}

@@ -18,57 +18,73 @@
     <main>
       <nav>
         <a href="./cities/athina.html">Αθήνα</a><br /><br />
-        <a href="#">Θεσσαλονίκη</a><br /><br />
+        <a href="./index.html">Θεσσαλονίκη</a><br /><br />
         <a href="./cities/kavala.html">Καβάλα</a><br /><br />
       </nav>
       <section id="forma">
-    <div class="formContainer">
-        <h4>(παρακαλώ συμπληρώστε με αγγλικούς χαρακτήρες)</h4>
-        
-        <form action="data.html" method="post">
-            
+        <div class="formContainer">
+          <h4>(παρακαλώ συμπληρώστε με αγγλικούς χαρακτήρες)</h4>
+
+          <form action="data.html" method="get">
             <div class="formRow">
-                <label>Ονοματεπώνυμο:</label>
-                <input type="text" name="fullName" required />
+              <label class="formlabel">Ονοματεπώνυμο:</label>
+              <input type="text" class="formfield" name="fullName" size="50" required />
             </div>
 
             <div class="formRow">
-                <label>Περιοχή:</label>
+              <label class="formlabel">Περιοχή:</label>
+              <div class="formfield">
                 <select name="area" size="3">
-                    <option value="athina">Μακεδονία</option>
-                    <option value="thessaloniki" >Πελοπόννησος</option>
-                    <option value="kavala">Θράκη</option>
+                  <option value="macedonia" selected>Μακεδονία</option>
+                  <option value="peloponnisos">Πελοπόννησος</option>
+                  <option value="thraki">Θράκη</option>
                 </select>
+              </div>
             </div>
 
             <div class="formRow">
-                <label>Τομέας Ενδιαφέροντος (διαλέξτε όσους θέλετε):</label>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="interests" value="historicalMonuments" /> Αρχαιολογικοί χώροι</label>
-                    <label><input type="checkbox" name="interests" value="beaches" /> Ακτές κολύμβησης</label>
-                    <label><input type="checkbox" name="interests" value="food" /> Φαγητό</label>
-                </div>
+              <label class="formlabel"
+                >Τομέας Ενδιαφέροντος (διαλέξτε όσους θέλετε):</label
+              >
+              <div class="checkbox-group">
+                <label class="formlabel"
+                  ><input
+                    type="checkbox"
+                    name="interests"
+                    value="historicalMonuments"
+                  />
+                  Αρχαιολογικοί χώροι</label
+                >
+                <label class="formlabel"
+                  ><input type="checkbox" name="interests" value="beaches" />
+                  Ακτές κολύμβησης</label
+                >
+                <label class="formlabel"
+                  ><input type="checkbox" name="interests" value="food" />
+                  Φαγητό</label
+                >
+              </div>
             </div>
 
             <div class="formRow">
-                <label>E-mail διεύθυνση:</label>
-                <input type="text" name="email" required />
+              <label class="formlabel">E-mail διεύθυνση:</label>
+              <div class="formfield">
+                <input type="email" name="email" size="50" required />
+              </div>
             </div>
 
             <div class="formRow">
-                <label></label> <div class="buttons">
-                    <button type="submit">Υποβολή</button>
-                    <button type="reset">Καθάρισμα</button>
-                </div>
+              <label class="formlabel"></label>
+              <div class="buttons">
+                <button type="submit">Υποβολή</button>
+                <button type="reset">Καθάρισμα</button>
+              </div>
             </div>
+          </form>
+        </div>
 
-        </form>
-    </div>
-
-    <div id="errorBox">
-        Σφάλματα:
-    </div>
-</section>
+        <div id="errorBox">Σφάλματα:</div>
+      </section>
       <aside>
         <a href="#">Εκδήλωση Ενδιαφέροντος</a>
       </aside>
@@ -80,5 +96,6 @@
       document.getElementById("copyright-year").textContent =
         new Date().getFullYear();
     </script>
+    <script src="validateForm.js"></script>
   </body>
 </html>
